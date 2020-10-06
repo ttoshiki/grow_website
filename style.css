@@ -1,0 +1,160 @@
+/*
+Theme Name: Sensei + The7
+Author: WP Explainer
+Author URI: https://wpexplainer.com/
+Description:
+Version: 1.2
+Template: dt-the7
+Text Domain: the7mk2
+*/
+
+/* typography */
+.page-title h1 {line-height: 1.3 !important;}
+
+.wpb_text_column .wpb_wrapper h1,
+.wpb_text_column .wpb_wrapper h2,
+.wpb_text_column .wpb_wrapper h3,
+.wpb_text_column .wpb_wrapper h4,
+.wpb_text_column .wpb_wrapper h5,
+.wpb_text_column .wpb_wrapper h6 {margin-top: 25px;}
+
+.page-title {min-height:0;}
+
+.page-title .wf-table {
+    min-height: 100px;
+    padding-top: 55px !important;
+    padding-bottom: 50px !important;
+    height:auto;
+}
+
+.page-title .wf-table .entry-title {
+    padding:10px 0;
+}
+
+.page-title .wf-td .breadcrumbs {
+    margin-top:0;
+    margin-bottom:10px;
+}
+
+.fancy-header .breadcrumbs li {
+    font-size:12px;
+    color:#b4b6b9;
+}
+
+.wpb_text_column .wpb_wrapper p {
+    line-height: 1.4;
+}
+
+.wpb_text_column.lead,.wpb_text_column.lead p {
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    font-size: 26px;
+}
+
+/* links */
+a,button,a.rev-btn,input[type=submit],a .menu-text {
+    -webkit-transition: all .3s ease-in-out !important;
+    -moz-transition: all .3s ease-in-out !important;
+    -ms-transition: all .3s ease-in-out !important;
+    -o-transition: all .3s ease-in-out !important;
+    transition: all .3s ease-in-out !important;
+}
+
+/* video widget */
+.wpb_video_widget.vc_video-aspect-ratio-169 {overflow:hidden;}
+
+.wpb_video_widget.vc_video-aspect-ratio-169 > .wpb_wrapper {
+    width: calc(100% + 8px);
+    margin-left: -4px;
+}
+
+/* list */
+.wpb_text_column .wpb_wrapper ul:not(.course-container) {
+    padding: 0 0 15px 20px;
+    list-style: none;
+}
+
+.wpb_text_column .wpb_wrapper ul li:not(.course) {
+    position: relative;
+}
+
+.wpb_text_column .wpb_wrapper ul li:not(.course):before {
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: #35373e;
+    -webkit-box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+    top: 7px;
+    left: -20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/*** input ***/
+.wpcf7-number, input[type=search], input[type=tel], input[type=url], input[type=email], input[type=number], input[type=date], input[type=range], input[type=password], input[type=text], select, textarea,#main .gform_wrapper textarea {
+    font-size:16px;
+    font-weight: 300;
+    color:#000;
+    padding-left: 10px;
+}
+
+input[type=checkbox], input[type=radio] {cursor:pointer;}
+
+/* custom checkbox buttons */
+p.comment-form-cookies-consent,
+.woocommerce-terms-and-conditions-wrapper label.checkbox,
+#customer_login > div.u-column1 form label.woocommerce-form__label-for-checkbox {
+    position:relative;
+    display: inline-block;
+}
+
+p.comment-form-cookies-consent input[type=checkbox],
+.woocommerce-terms-and-conditions-wrapper label.checkbox input[type=checkbox],
+#customer_login > div.u-column1 form label.woocommerce-form__label-for-checkbox > input[type=checkbox] {
+    padding: 0;
+    margin: 0;
+    height: 16px !important;
+    width: 16px !important;
+    opacity: 0;
+    position: absolute;
+    left:0;
+    top:0;
+    cursor:pointer;
+}
+
+p.comment-form-cookies-consent label[for="wp-comment-cookies-consent"],
+.woocommerce-terms-and-conditions-wrapper label.checkbox span.woocommerce-terms-and-conditions-checkbox-text,
+#customer_login > div.u-column1 form label.woocommerce-form__label-for-checkbox > span {
+    background: url("../dt-the7-child/images/input-checkbox-unchecked.png") no-repeat 0 0;
+    background-size: 25px 25px;
+    padding: 0 0 0 32px;
+    min-height: 25px;
+    display: inline-block;
+    cursor:pointer;
+}
+
+p.comment-form-cookies-consent input[type=checkbox]:checked + label[for="wp-comment-cookies-consent"],
+.woocommerce-terms-and-conditions-wrapper label.checkbox input[type=checkbox]:checked + span.woocommerce-terms-and-conditions-checkbox-text,
+#customer_login > div.u-column1 form label.woocommerce-form__label-for-checkbox input[type=checkbox]:checked + span {
+    background: url("../dt-the7-child/images/input-checkbox-checked-green.png") no-repeat 0 0;
+    background-size: 25px 25px;
+    min-height: 25px;
+    display:inline-block;
+}
+
+p.comment-form-cookies-consent label[for="wp-comment-cookies-consent"] {
+    display:inline-block;
+    padding-top:0;
+}
+
+.form-row.create-account label.checkbox span:before,
+.woocommerce form .form-row .required {display:none;}
+
+/* responsive behaviour */
+@media all and (min-width:951px){.desktop-hidden {display:none !important;}}
+@media all and (max-width:950px){.mobile-hidden {display:none !important;}}

@@ -1,0 +1,184 @@
+/*** WOOCOMMERCE ***/
+/*** general styling ***/
+/* cart in header menu */
+.round-counter-style .wc-ico-cart>.counter {margin-left: 3px;}
+
+.inline-header .header-bar>.mini-widgets {padding-left:10px !important;}
+
+.wc-ico-cart.mini-icon-off span.counter {display:none;}
+
+/*** my account ***/
+/* account navigation */
+.woocommerce-MyAccount-navigation>ul li {
+    border-radius:5px;
+}
+
+.woocommerce-MyAccount-navigation>ul li a {
+    font-weight: 700 !important;
+    text-transform: none;
+    font-size: 20px;
+}
+
+.woocommerce-MyAccount-navigation > ul li:not(.is-active) a:hover {
+    background: #e6e6e6;
+    color: #020204;
+    border-radius: 5px;
+}
+
+.woocommerce-MyAccount-content .woocommerce-Button.button, .woocommerce-MyAccount-content fieldset {margin-top:0;}
+
+/* my account sensei tabs */
+#user-course-status-toggle a {
+    font-weight: 700 !important;
+    font-size: 18px;
+    color:#020204;
+    padding: 10px 18px;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+}
+
+#user-course-status-toggle {margin-bottom:0;}
+
+#sensei-user-courses .my-messages-link-container a {
+    background-color: #f4f4f4;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+#sensei-user-courses {margin-top: 35px;}
+
+#sensei-user-courses .course-container {
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2 !important;
+    border-left: 1px solid #e2e2e2;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    padding:15px 15px 0 15px;
+    margin-left: 0;
+}
+
+/* checkout */
+.woocommerce-shipping-fields {
+    margin-bottom:0;
+    padding-top:0;
+}
+
+@media all and (min-width:990px) {
+    form.woocommerce-checkout .form-row#billing_country_field,
+    form.woocommerce-checkout .form-row#billing_state_field,
+    form.woocommerce-checkout .form-row#billing_phone_field,
+    form.woocommerce-checkout .form-row#billing_email_field {
+        float: left;
+        overflow: visible;
+        width: 50%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-right: 15px;
+    }
+
+    form.woocommerce-checkout .form-row#billing_state_field,
+    form.woocommerce-checkout .form-row#billing_email_field {
+        padding-right: 0;
+        padding-left: 15px;
+    }
+}
+
+#page #place_order,#page .checkout-button.wc-forward,.checkout-button {
+    background-color: #0bd392 !important;
+}
+
+#page #place_order:hover,#page .checkout-button.wc-forward:hover,.checkout-button:hover {
+    background-color: #0bc17f !important;
+}
+
+/* notifications */
+div:not(.wc-coupon-wrap):not(.wc-login-wrap):not(.woocommerce-MyAccount-content) > .woocommerce-message,
+.woocommerce-error, div:not(.wc-coupon-wrap):not(.wc-login-wrap):not(.woocommerce-MyAccount-content) > .woocommerce-info {
+    background-color: #0bd392 !important;
+}
+
+/* stripe */
+#wc-stripe-cc-form label {font-size: 14px;}
+
+/* login page */
+body.woocommerce-account:not(.logged-in) #content > .woocommerce {
+    /*max-width: 500px;*/
+    margin: 0 auto;
+}
+
+#customer_login > div.u-column2 form label.woocommerce-form__label-for-checkbox {margin-left:0 !important;}
+
+form.lost_reset_password {width:100% !important;}
+
+.woocommerce-form-login .woocommerce-form__label-for-checkbox {cursor:pointer;}
+
+/* custom radio buttons for woocommerce */
+body.woocommerce-page li.wc_payment_method {
+    position:relative;
+}
+
+body.woocommerce-page li.wc_payment_method input[type=radio] {
+    padding: 0;
+    margin: 0;
+    height: 16px !important;
+    width: 16px !important;
+    opacity: 0;
+    position: absolute;
+    left:0;
+    top:0;
+    cursor:pointer;
+}
+
+body.woocommerce-page li.wc_payment_method > label {
+    background: url("../dt-the7-child/images/input-radio-unchecked.png") no-repeat 0 0;
+    background-size: 20px 20px;
+    padding: 0 0 0 25px;
+    min-height: 25px;
+    cursor:pointer;
+}
+
+body.woocommerce-page li.wc_payment_method > input[type=radio]:checked + label {
+    background: url("../dt-the7-child/images/input-radio-checked-green.png") no-repeat 0 0;
+    background-size: 20px 20px;
+    font-weight:normal;
+    min-height: 25px;
+}
+
+/* woocommerce subscriptions */
+.single-course .course-meta .course-products {
+    padding:0;
+    background: transparent;
+    grid-gap: 12px;
+    margin-bottom: 36px;
+}
+
+.single-course .course-meta .course-products .course-product {
+    box-shadow:none;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #e6e6e6;
+}
+
+.single-course .course-meta .course-products .course-product span.course-product-price {
+    width: auto;
+    display: inline-block !important;
+}
+
+.single-course article.course .course-meta .course-products .course-product .single_add_to_cart_button {
+    padding: 0 12px !important;
+    font-size: 12px !important;
+}
+
+body.single-course .course-meta .course-products .course-product-price ins,
+body.single-course .course-meta .course-products .course-product-price span.subscription-details {
+    font-family: proxima-nova,sans-serif;
+}
+
+body.single-course .course-meta .course-products .course-product-price span.subscription-details {
+    padding-right:5px;
+}
