@@ -1,13 +1,12 @@
 <?php
 
 // Load WC_AM_Client class if it exists.
-if ( ! class_exists( 'WC_AM_Client_2_7' ) ) {
-
-    require_once( get_stylesheet_directory() . '/wc-am-client.php' );
+if (! class_exists('WC_AM_Client_2_7')) {
+    require_once(get_stylesheet_directory() . '/wc-am-client.php');
 }
 
 // Instantiate WC_AM_Client class object if the WC_AM_Client class is loaded.
-if ( class_exists( 'WC_AM_Client_2_7' ) ) {
+if (class_exists('WC_AM_Client_2_7')) {
     /**
      * This file is only an example that includes a plugin header, and this code used to instantiate the client object. The variable $wcam_lib
      * can be used to access the public properties from the WC_AM_Client class, but $wcam_lib must have a unique name. To find data saved by
@@ -34,30 +33,30 @@ if ( class_exists( 'WC_AM_Client_2_7' ) ) {
      */
 
     // Preferred positive integer product_id.
-    $wcam_lib = new WC_AM_Client_2_7( __FILE__, '', '1.3', 'theme', 'https://wpexplainer.com/', 'Sensei LMS + The7' );
+    $wcam_lib = new WC_AM_Client_2_7(__FILE__, '', '1.3', 'theme', 'https://wpexplainer.com/', 'Sensei LMS + The7');
 }
 
 /* child style */
-function childtheme_enqueue_styles() {
-
-    wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css' , false,filemtime( get_stylesheet_directory() . '/style.css' ), 'all' );
-    wp_enqueue_style( 'wpx-sensei', get_stylesheet_directory_uri() . '/wpx-sensei.css' , false,filemtime( get_stylesheet_directory() . '/wpx-sensei.css' ), 'all' );
-    wp_enqueue_style( 'wpx-woocommerce', get_stylesheet_directory_uri() . '/wpx-woocommerce.css' , false,filemtime( get_stylesheet_directory() . '/wpx-woocommerce.css' ), 'all' );
-    wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/custom-script.js' , false, 'all'  );
-
+function childtheme_enqueue_styles()
+{
+    wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', false, filemtime(get_stylesheet_directory() . '/style.css'), 'all');
+    wp_enqueue_style('wpx-sensei', get_stylesheet_directory_uri() . '/wpx-sensei.css', false, filemtime(get_stylesheet_directory() . '/wpx-sensei.css'), 'all');
+    wp_enqueue_style('wpx-woocommerce', get_stylesheet_directory_uri() . '/wpx-woocommerce.css', false, filemtime(get_stylesheet_directory() . '/wpx-woocommerce.css'), 'all');
+    wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/js/custom-script.js', false, 'all');
 }
-add_action( 'wp_enqueue_scripts', 'childtheme_enqueue_styles', 25 );
+add_action('wp_enqueue_scripts', 'childtheme_enqueue_styles', 25);
 
 /**
  * Loads the child theme textdomain.
  */
-function brandrocket_child_theme_setup() {
-    load_child_theme_textdomain( 'jupiter', get_stylesheet_directory() . '/languages' );
+function brandrocket_child_theme_setup()
+{
+    load_child_theme_textdomain('jupiter', get_stylesheet_directory() . '/languages');
 }
-add_action( 'after_setup_theme', 'brandrocket_child_theme_setup' );
+add_action('after_setup_theme', 'brandrocket_child_theme_setup');
 
 /*** woocommerce ***/
-if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+if (is_plugin_active('woocommerce/woocommerce.php')) {
     /* remove extra billing information */
     add_filter('woocommerce_checkout_fields', 'custom_remove_checkout_fields');
 
@@ -92,23 +91,25 @@ if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
     add_filter('woocommerce_add_to_cart_redirect', 'wpx_redirect_checkout_add_cart');
 
     /* add my courses to my account */
-    add_action( 'woocommerce_account_dashboard', 'my_dashboard_addition' );
-    function my_dashboard_addition() {
+    add_action('woocommerce_account_dashboard', 'my_dashboard_addition');
+    function my_dashboard_addition()
+    {
         echo do_shortcode('[sensei_user_courses]');
     }
 
     /* Product thumbnails on checkout */
-    add_filter( 'woocommerce_cart_item_name', 'ts_product_image_on_checkout', 10, 3 );
+    add_filter('woocommerce_cart_item_name', 'ts_product_image_on_checkout', 10, 3);
 
-    function ts_product_image_on_checkout( $name, $cart_item, $cart_item_key ) {
+    function ts_product_image_on_checkout($name, $cart_item, $cart_item_key)
+    {
 
         /* Return if not checkout page */
-        if ( ! is_checkout() ) {
+        if (! is_checkout()) {
             return $name;
         }
 
         /* Get product object */
-        $_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+        $_product = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
 
         /* Get product thumbnail */
         $thumbnail = $_product->get_image();
@@ -121,41 +122,39 @@ if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
         /* Prepend image to name and return it */
         return $image . $name;
     }
-
 }
 
 /*** register our sidebars and widgetized areas  ***/
-function wpexplainer_widgets_init() {
-
-    register_sidebar( array(
+function wpexplainer_widgets_init()
+{
+    register_sidebar(array(
         'name'          => 'Course sidebar - Above modules (logged in users)',
         'id'            => 'single_course_sidebar_above_loggedin',
         'before_title'  => '<h5 class="sidebar-title">',
         'after_title'   => '</h5>'
-    ) );
+    ));
 
-    register_sidebar( array(
+    register_sidebar(array(
         'name'          => 'Course sidebar - Above modules (not-logged in)',
         'id'            => 'single_course_sidebar_above',
         'before_title'  => '<h5 class="sidebar-title">',
         'after_title'   => '</h5>'
-    ) );
+    ));
 
-    register_sidebar( array(
+    register_sidebar(array(
         'name'          => 'Course sidebar - Below modules',
         'id'            => 'single_course_sidebar',
         'before_widget' => '<section class="single-course-sidebar">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'
-    ) );
-
+    ));
 }
 
-add_action( 'widgets_init', 'wpexplainer_widgets_init' );
+add_action('widgets_init', 'wpexplainer_widgets_init');
 
 /*** sensei general ***/
-if ( is_plugin_active( 'woothemes-sensei/woothemes-sensei.php' ) or is_plugin_active( 'sensei-lms/sensei-lms.php' ) ) {
+if (is_plugin_active('woothemes-sensei/woothemes-sensei.php') or is_plugin_active('sensei-lms/sensei-lms.php')) {
 
     /* unhook the default Sensei wrappers */
     global $woothemes_sensei;
@@ -187,39 +186,55 @@ if ( is_plugin_active( 'woothemes-sensei/woothemes-sensei.php' ) or is_plugin_ac
     remove_action('sensei_single_course_content_inside_before', array('Sensei_Course', 'the_title'), 10);
     remove_action('sensei_single_course_content_inside_before', array('Sensei_Course', 'the_course_video'), 40);
     add_action('sensei_single_course_content_inside_before', array('Sensei_Course', 'the_course_video'), 11);
-    remove_action( 'sensei_single_lesson_content_inside_before', array('Sensei_Lesson', 'the_title'), 15 );
+    remove_action('sensei_single_lesson_content_inside_before', array('Sensei_Lesson', 'the_title'), 15);
 
     /* Single quiz */
-    remove_action( 'sensei_single_quiz_content_inside_before', array('Sensei_Quiz', 'the_title'), 20 );
+    remove_action('sensei_single_quiz_content_inside_before', array('Sensei_Quiz', 'the_title'), 20);
 
     function wpx_quiz_title()
     {
-        echo '<h2 class="lesson-title-link">' . get_the_title( get_the_ID() ) . '</h2>';
-
+        echo '<h2 class="lesson-title-link">' . get_the_title(get_the_ID()) . '</h2>';
     }
-    add_action( 'sensei_single_quiz_content_inside_before', 'wpx_quiz_title', 20 );
-
+    add_action('sensei_single_quiz_content_inside_before', 'wpx_quiz_title', 20);
 }
 
-add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
+add_filter('wp_calculate_image_srcset_meta', '__return_null');
 
 /*** 追記 ***/
 
-function logout_redirect(){
-	wp_safe_redirect(home_url().'/login');
-	exit();
+function logout_redirect()
+{
+    wp_safe_redirect(home_url().'/login');
+    exit();
 }
-add_action('wp_logout','logout_redirect');
+add_action('wp_logout', 'logout_redirect');
 
-function login_redirect(){
-	wp_safe_redirect(home_url().'/my-account');
-	exit();
+function login_redirect()
+{
+    wp_safe_redirect(home_url().'/my-account');
+    exit();
 }
-add_action('wp_login','login_redirect');
+add_action('wp_login', 'login_redirect');
 
-function ez_sparrow_remove_password_strength() {
-	if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
-		wp_dequeue_script( 'wc-password-strength-meter' );
-	}
+function ez_sparrow_remove_password_strength()
+{
+    if (wp_script_is('wc-password-strength-meter', 'enqueued')) {
+        wp_dequeue_script('wc-password-strength-meter');
+    }
 }
-add_action( 'wp_print_scripts', 'ez_sparrow_remove_password_strength', 100 );
+add_action('wp_print_scripts', 'ez_sparrow_remove_password_strength', 100);
+
+/**
+ * Google Fonts
+ */
+
+function twpp_enqueue_styles()
+{
+    wp_enqueue_style(
+        'google-webfont-style',
+        '//fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap
+'
+    );
+}
+
+add_action('wp_enqueue_scripts', 'twpp_enqueue_styles');
