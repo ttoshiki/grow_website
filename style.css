@@ -214,6 +214,38 @@ p.comment-form-cookies-consent label[for="wp-comment-cookies-consent"] {
     }
 }
 
+.fixedMenu.-sp {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+}
+
+.fixedMenuLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: #58b530;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.fixedMenuLink.-primary {
+    background-color: #fff600;
+}
+
+.fixedMenuLink.-secondary {
+    border: 2px solid rgb(88, 181, 48);
+    background-color: #ffffff;
+}
+
 #main > .wf-wrap {
     width: 100%;
     padding: 0;
@@ -1042,7 +1074,7 @@ a:hover {
     }
 
     .home-worry {
-        padding: 30px 20px;
+        padding: 30px 20px 48px;
         margin: 80px auto 0;
         width: calc(100% - 40px);
         background-image: -webkit-linear-gradient(
