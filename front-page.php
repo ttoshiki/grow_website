@@ -26,7 +26,7 @@ $config->set('post.preview.media.width', 30);
 get_header();
 ?>
 
-            <div class="home">
+            <div class="home-wrapper">
                 <section class="home-news">
                     <div class="home-newsInner">
                         <div class="home-newsHeadingWrapper">
@@ -34,13 +34,27 @@ get_header();
                         </div>
                         <article class="home-newsArticle">
                             <ul class="home-newsList">
-                                <?php if (have_posts()): ?>
-                                    <?php while (have_posts()) : the_post(); ?>
-                                        <li id="post-<?php the_ID(); ?>" class="home-newsItem">
-                                            <time datetime="<?php echo get_the_date('Y.m.d'); ?>" class="home-newsDate custom-font"><?php echo get_the_date('Y.m.d'); ?></time>
-                                            <a href="<?php the_permalink(); ?>" class="home-newsLink"><span class="home-newsTitle"><?php echo get_the_title(); ?></span></a>
-                                        </li>
-                                    <?php endwhile; ?>
+                                <?php
+                                    $args = array(
+                                        'post_type' => 'post',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'category',
+                                                'field' => 'slug',
+                                                'terms' => 'news',
+                                                'operator' => 'IN'
+                                            ),
+                                        )
+                                    );
+                                    $the_query = new WP_Query($args); if ($the_query->have_posts()):
+                                ?>
+                                <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                                    <li id="post-<?php the_ID(); ?>" class="home-newsItem">
+                                        <time datetime="<?php echo get_the_date('Y.m.d'); ?>" class="home-newsDate custom-font"><?php echo get_the_date('Y.m.d'); ?></time>
+                                        <a href="<?php the_permalink(); ?>" class="home-newsLink"><span class="home-newsTitle"><?php echo get_the_title(); ?></span></a>
+                                    </li>
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
                                 <?php else: ?>
                                     <p>準備中です</p>
                                 <?php endif; ?>
