@@ -222,8 +222,16 @@ get_header();
                     <span class="sectionHeadingSub">イベント情報</span>
                     <?php
                         $args = array(
-                            'post_type' => 'event',
-                            'posts_per_page' => 4
+                            'post_type' => 'post',
+                            'posts_per_page' => 4,
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'category',
+                                    'field' => 'slug',
+                                    'terms' => 'event',
+                                    'operator' => 'IN'
+                                ),
+                            )
                          );
                         $the_query = new WP_Query($args); if ($the_query->have_posts()):
                     ?>
@@ -238,9 +246,9 @@ get_header();
                                     ?>
                                     <div class="home-eventMeta">
                                         <?php
-                                            $terms = get_the_terms($post->ID, 'tag_event');
-                                            foreach ($terms as $term) {
-                                                echo '<span class="home-eventTag">'.$term->name.'</span>';
+                                            $tags = get_tags();
+                                            foreach( $tags as $tag) {
+                                                echo '<span class="home-eventTag">'.$tag->name.'</span>';
                                             }
                                         ?>
                                         <time class="home-eventDate" datetime="<?php echo get_the_date('Y.m.d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
