@@ -113,7 +113,7 @@ a:hover {
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
-    background-image: url(images/icons/arrow.png);
+    background-image: url(../images/icons/arrow.png);
     background-size: cover;
     width: 31px;
     height: 15px;
@@ -350,7 +350,7 @@ a:hover {
 
 .home-category {
     position: relative;
-    background-image: url(images/home/category_bg.png);
+    background-image: url(../images/home/category_bg.png);
     background-size: 128% 922px;
     padding-bottom: 110px;
     background-repeat: no-repeat;
@@ -384,7 +384,7 @@ a:hover {
 
 .home-categoryItemLink::after {
     content: "";
-    background-image: url(images/icons/triangle.png);
+    background-image: url(../images/icons/triangle.png);
     display: inline-block;
     width: 12px;
     height: 14px;
@@ -559,7 +559,7 @@ a:hover {
     height: 40px;
     transform: translateX(-50%);
     left: 50%;
-    background-image: url(images/icons/triangle_white.png);
+    background-image: url(../images/icons/triangle_white.png);
     background-size: cover;
 }
 
@@ -653,7 +653,7 @@ a:hover {
         font-size: 14px;
     }
 
-    .home-wrpaper {
+    .home-wrapper {
         margin-top: 64px;
     }
 
@@ -758,7 +758,7 @@ a:hover {
         width: 100%;
         padding: 0 20px 8vw;
         min-width: auto;
-        background-image: url(images/home/category_bg-sp.png);
+        background-image: url(../images/home/category_bg-sp.png);
         background-size: 118%;
         background-position: center -13vw;
     }
@@ -792,6 +792,7 @@ a:hover {
     .home-categoryItemPicture {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 80px;
     }
 
