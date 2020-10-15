@@ -8,7 +8,7 @@ Template: dt-the7
 Text Domain: the7mk2
 */
 
-* {
+.home-wrapper * {
     box-sizing: border-box;
 }
 
