@@ -7,12 +7,14 @@
  * @package The7\Templates
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-get_template_part( 'header-single' );
-get_template_part( 'header-main' );
+get_template_part('header-single');
+get_template_part('header-main');
 
 ?>
+
+<link href="/wp-content/themes/dt-the7-child/css/my-page.css">
 
 <aside class="fixedMenu -sp">
   <a href="<?php echo home_url(); ?>" class="fixedMenuLink -primary">会員登録</a>

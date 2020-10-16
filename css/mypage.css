@@ -1,0 +1,119 @@
+.home-wrapper * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, Verdana, Meiryo, sans-serif;
+}
+
+.text-font {
+  font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, Verdana, Meiryo, sans-serif;
+}
+
+.custom-font {
+  font-family: "Quicksand", sans-serif;
+}
+
+.page-title > .wf-wrap,
+#fancy-header > .wf-wrap {
+  display: none;
+}
+
+.myPage-header {
+  background-image: -webkit-linear-gradient(110deg, rgb(64, 177, 52) 10%, rgb(219, 251, 108) 100%);
+  padding: 112px 0;
+}
+
+.myPage-heading {
+  color: #ffffff;
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+
+.myPage-subHeading {
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 12px 0 0;
+}
+
+.myPage-lead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin: 120px auto 0;
+}
+
+.myPage-leadText {
+  margin-left: 110px;
+}
+
+.myPage-leadHeading {
+  font-size: 23px;
+  color: #6fcc25;
+  font-feature-settings: "palt";
+  letter-spacing: 3px;
+}
+
+.myPage-leadParagraph {
+  color: #727171;
+  font-size: 17px;
+  line-height: 2.35;
+  margin: 40px 0 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.myPage-conversionArea {
+  width: 1120px;
+  margin: 128px auto 0;
+  background-image: -webkit-linear-gradient(110deg, rgb(64, 177, 52) 10%, rgb(219, 251, 108) 100%);
+  border-radius: 10px;
+  padding: 64px 72px;
+}
+
+.myPage-conversionAreaHeading {
+  font-size: 26px;
+  color: #ffffff;
+  line-height: 1.92;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.myPage-conversionArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myPage-conversionAreaParagraph {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 2.3;
+}
+
+.myPage-conversionArea .btn {
+  height: auto;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 38px 80px;
+  border-radius: 60px;
+  letter-spacing: 5px;
+}
+
+.myPage-contentsList {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 60px auto 0;
+}
