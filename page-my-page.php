@@ -37,7 +37,7 @@ get_header();
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/lead_illust.png" alt="">
                 </picture>
                 <div class="myPage-leadText">
-                  <h2 class="myPage-leadHeading">個人投資家のための資産形成講座Grow</h2>
+                  <h2 class="myPage-leadHeading">個人投資家のための<br class="-sp">資産形成講座Grow</h2>
                   <p class="myPage-leadParagraph">
                     「投資をしてみたいけど、何から始めたらいいかわからない」
                     そんな方でも安心して、一歩一歩着実に投資を学べる環境がGrowです。
@@ -54,7 +54,7 @@ get_header();
                 <div class="myPage-conversionAreaText">
                   <h2 class="myPage-conversionAreaHeading">
                     投資教育を、<br>
-                    いつでもどこでも誰にでも。
+                    いつでもどこでも<br class="-sp">誰にでも。
                   </h2>
                   <p class="myPage-conversionAreaParagraph">
                     正しい考え方と手法を身につけることで、<br>
@@ -68,7 +68,7 @@ get_header();
                 <span class="sectionHeadingSub">コンテンツ紹介</span>
                 <ul class="myPage-contentsList">
                   <li class="myPage-contentsItem">
-                    <picture class="myPage-leadPicture">
+                    <picture class="myPage-contentsPicture">
                       <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents01.webp" type="image/webp">
                       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents01.png" alt="動画講座">
                     </picture>
@@ -78,7 +78,7 @@ get_header();
                     </div>
                   </li>
                   <li class="myPage-contentsItem">
-                    <picture class="myPage-leadPicture">
+                    <picture class="myPage-contentsPicture">
                       <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents02.webp" type="image/webp">
                       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents02.png" alt="実践情報">
                     </picture>
@@ -88,7 +88,7 @@ get_header();
                     </div>
                   </li>
                   <li class="myPage-contentsItem">
-                    <picture class="myPage-leadPicture">
+                    <picture class="myPage-contentsPicture">
                       <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents03.webp" type="image/webp">
                       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents03.png" alt="ZOOM質問会">
                     </picture>

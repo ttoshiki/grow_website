@@ -21,6 +21,10 @@ body {
   padding: 0;
 }
 
+.scroll-top.on {
+  display: none;
+}
+
 .page-title > .wf-wrap,
 #fancy-header > .wf-wrap {
   display: none;
@@ -54,6 +58,10 @@ body {
   align-items: center;
   width: 1000px;
   margin: 120px auto 0;
+}
+
+.myPage-leadPicture img {
+  max-width: 100%;
 }
 
 .myPage-leadText {
@@ -127,7 +135,7 @@ body {
   width: 30%;
 }
 
-.myPage-leadPicture img {
+.myPage-contentsPicture img {
   max-width: 100%;
 }
 
@@ -169,6 +177,7 @@ body {
 
 .myPage-faqQuestionWrapper {
   padding: 24px 30px;
+  position: relative;
 }
 
 .myPage-faqQuestionWrapper:hover {
@@ -177,11 +186,6 @@ body {
 
 .myPage-faqItem:not(:first-child) {
   margin: 30px auto 0;
-}
-
-.myPage-faqItem::before {
-  content: "";
-  background-color: #6fcc25;
 }
 
 .myPage-faqQuestion,
@@ -259,8 +263,6 @@ body {
   background-color: #6fcc25;
 }
 
-
-
 .myPage-overview .sectionHeading {
   margin-top: 0;
 }
@@ -334,4 +336,198 @@ body {
 .myPage-termsButton .btn {
   display: inline-block;
 }
+
+@media all and (max-width: 480px) {
+  .-pc {
+    display: none;
+  }
+
+  .-sp {
+    display: block;
+  }
+
+  .myPage-header {
+    padding: 80px 0;
+  }
+
+  .myPage-heading {
+    font-size: 32px;
+  }
+
+  .myPage-subHeading {
+    font-size: 16px;
+  }
+
+  .myPage-lead {
+    flex-direction: column;
+    margin: 64px auto 0;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .myPage-leadPicture img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .myPage-leadHeading {
+    text-align: center;
+  }
+
+  .myPage-leadText {
+    margin: 40px auto 0;
+  }
+
+  .myPage-leadParagraph {
+    font-size: 16px;
+    line-height: 2;
+    margin: 24px 0 0;
+  }
+
+  .myPage-conversionArea {
+    padding: 48px 20px;
+    margin: 80px auto 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .myPage-conversionAreaHeading {
+    font-size: 24px;
+  }
+
+  .myPage-conversionAreaParagraph {
+    font-size: 16px;
+  }
+
+  .myPage-conversionArea .btn {
+    padding: 26px 0 26px 8vw;
+    margin: 16px 0 0;
+    text-align: left;
+    font-size: 4.8vw;
+    letter-spacing: 1vw;
+  }
+
+  .myPage-contents {
+    margin-bottom: 80px;
+  }
+
+  .myPage-contentsList {
+    padding: 0 20px;
+    margin: 32px auto 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .myPage-contentsItem {
+    width: 100%;
+  }
+
+  .myPage-contentsPicture img {
+    width: 48%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .myPage-contentsItem:not(:first-child) {
+    margin: 48px auto 0;
+  }
+
+  .myPage-contentsItemHeading {
+    font-size: 20px;
+    margin: 16px auto 0;
+  }
+
+  .myPage-contentsMarker {
+    font-size: 15px;
+  }
+
+  .myPage-faq {
+    margin: 0 auto 64px;
+  }
+
+  .myPage-faqList {
+    width: 100%;
+    padding: 0 20px;
+    margin: 48px auto 0;
+  }
+
+  .myPage-faqQuestionWrapper {
+    padding: 24px 44px 24px 20px;
+  }
+
+  .myPage-faqQuestion {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .myPage-faqQuestion::before,
+  .myPage-faqAnswer::before {
+    font-size: 40px;
+    min-height: 40px;
+    margin-right: 8px;
+  }
+
+  .myPage-faqIconVertical {
+    right: 24px;
+    top: 44%;
+  }
+
+  .myPage-faqIconHorizontal {
+    top: 50%;
+    right: 17px;
+  }
+
+  .myPage-faqAnswerWrapper {
+    padding: 0 44px 24px 24px;
+  }
+
+  .myPage-faqAnswer {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .myPage-faqAnswer::before {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .myPage-overview {
+    padding: 64px 20px 80px;
+    width: 100%;
+  }
+
+  .myPage-overviewGraph {
+    margin: 48px auto 0;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .myPage-overviewGraph dt {
+    padding: 16px 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .myPage-overviewGraph dd {
+    padding: 32px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .myPage-overviewContentsItem {
+    padding-left: 10px;
+    text-indent: -10px;
+  }
+
+  .myPage-overviewContentsItem:not(:first-child) {
+    margin-top: 6px;
+  }
+
+  .myPage-terms {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .myPage-termsButton {
+    margin: 40px auto 0;
+  }
 }
