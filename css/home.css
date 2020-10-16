@@ -179,10 +179,11 @@ a:hover {
 }
 
 .home-newsDate {
-    min-width: 82px;
+    min-width: 86px;
     color: #6fcc25;
     font-size: 15px;
     letter-spacing: 1px;
+    display: inline-block;
 }
 
 .home-newsTitle {
@@ -848,7 +849,7 @@ a:hover {
         width: 100%;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 16px;
-        grid-auto-rows: 208px;
+        grid-auto-rows: 168px;
         width: 100%;
     }
 

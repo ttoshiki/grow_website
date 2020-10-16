@@ -61,7 +61,7 @@ get_header();
                     誰でも投資で資産形成ができるようになります。
                   </p>
                 </div>
-                <a href="<?php echo home_url(); ?>" class="btn fill">Grow会員登録はこちら</a>
+                <a href="<?php echo home_url('/my-page/'); ?>" class="btn fill">Grow会員登録はこちら</a>
               </section>
               <section class="myPage-contents">
                 <h2 class="sectionHeading">Contents</h2>
@@ -73,7 +73,9 @@ get_header();
                       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents01.png" alt="動画講座">
                     </picture>
                     <h3 class="myPage-contentsItemHeading">動画講座</h3>
-                    <mark class="myPage-contentsMarker">まずは投資の知識を身につける！</mark>
+                    <div class="myPage-contentsMarkerWrapper">
+                      <mark class="myPage-contentsMarker">まずは投資の知識を身につける！</mark>
+                    </div>
                   </li>
                   <li class="myPage-contentsItem">
                     <picture class="myPage-leadPicture">
@@ -81,15 +83,19 @@ get_header();
                       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents02.png" alt="実践情報">
                     </picture>
                     <h3 class="myPage-contentsItemHeading">実践情報</h3>
-                    <mark class="myPage-contentsMarker">実際に投資をチャレンジする！</mark>
+                    <div class="myPage-contentsMarkerWrapper">
+                      <mark class="myPage-contentsMarker">実際に投資をチャレンジする！</mark>
+                    </div>
                   </li>
                   <li class="myPage-contentsItem">
                     <picture class="myPage-leadPicture">
-                      <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents01.webp" type="image/webp">
-                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents01.png" alt="ZOOM質問会">
+                      <source srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents03.webp" type="image/webp">
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mypage/contents03.png" alt="ZOOM質問会">
                     </picture>
                     <h3 class="myPage-contentsItemHeading">ZOOM質問会</h3>
-                    <mark class="myPage-contentsMarker">わからないところは講師に質問！</mark>
+                    <div class="myPage-contentsMarkerWrapper">
+                      <mark class="myPage-contentsMarker">わからないところは講師に質問！</mark>
+                    </div>
                   </li>
                 </ul>
               </section>
@@ -98,20 +104,44 @@ get_header();
                 <span class="sectionHeadingSub">よくあるご質問</span>
                 <ul class="myPage-faqList">
                   <li class="myPage-faqItem">
-                    <span class="myPage-faqQuestion">銀行振り込みはできますか？</span>
-                    <span class="myPage-faqAnswer">クレジットカード決済のみとなっております。</span>
+                    <div class="myPage-faqQuestionWrapper">
+                      <span class="myPage-faqQuestion">銀行振り込みはできますか？</span>
+                      <span class="myPage-faqIconVertical"></span>
+                      <span class="myPage-faqIconHorizontal"></span>
+                    </div>
+                    <div class="myPage-faqAnswerWrapper">
+                      <span class="myPage-faqAnswer">クレジットカード決済のみとなっております。</span>
+                    </div>
                   </li>
                   <li class="myPage-faqItem">
-                    <span class="myPage-faqQuestion">資金がどのくらいあれば投資を始められますか？</span>
-                    <span class="myPage-faqAnswer">回答が入ります。</span>
+                    <div class="myPage-faqQuestionWrapper">
+                      <span class="myPage-faqQuestion">資金がどのくらいあれば投資を始められますか？</span>
+                      <span class="myPage-faqIconVertical"></span>
+                      <span class="myPage-faqIconHorizontal"></span>
+                    </div>
+                    <div class="myPage-faqAnswerWrapper">
+                      <span class="myPage-faqAnswer">回答が入ります。</span>
+                    </div>
                   </li>
                   <li class="myPage-faqItem">
-                    <span class="myPage-faqQuestion">途中解約した場合どうなりますか？</span>
-                    <span class="myPage-faqAnswer">回答が入ります。</span>
+                    <div class="myPage-faqQuestionWrapper">
+                      <span class="myPage-faqQuestion">途中解約した場合どうなりますか？</span>
+                      <span class="myPage-faqIconVertical"></span>
+                      <span class="myPage-faqIconHorizontal"></span>
+                    </div>
+                    <div class="myPage-faqAnswerWrapper">
+                      <span class="myPage-faqAnswer">回答が入ります。</span>
+                    </div>
                   </li>
                   <li class="myPage-faqItem">
-                    <span class="myPage-faqQuestion">投資は初心者ですが登録できますか？</span>
-                    <span class="myPage-faqAnswer">回答が入ります。</span>
+                    <div class="myPage-faqQuestionWrapper">
+                      <span class="myPage-faqQuestion">投資は初心者ですが登録できますか？</span>
+                      <span class="myPage-faqIconVertical"></span>
+                      <span class="myPage-faqIconHorizontal"></span>
+                    </div>
+                    <div class="myPage-faqAnswerWrapper">
+                      <span class="myPage-faqAnswer">回答が入ります。</span>
+                    </div>
                   </li>
                 </ul>
               </section>
@@ -152,7 +182,9 @@ get_header();
                     ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
                   </p>
                 </div>
-                <a class="btn primary">会員登録はこちら</a>
+                <div class="myPage-termsButton">
+                  <a href="<?php echo home_url('/my-page/') ?>" class="btn primary">会員登録はこちら</a>
+                </div>
               </section>
             </div>
 

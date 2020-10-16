@@ -1,10 +1,11 @@
-.home-wrapper * {
+.myPage-wrapper * {
   box-sizing: border-box;
 }
 
 body {
   font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
     "Helvetica Neue", HelveticaNeue, Verdana, Meiryo, sans-serif;
+  color: #727171;
 }
 
 .text-font {
@@ -14,6 +15,10 @@ body {
 
 .custom-font {
   font-family: "Quicksand", sans-serif;
+}
+
+#main {
+  padding: 0;
 }
 
 .page-title > .wf-wrap,
@@ -106,7 +111,7 @@ body {
   font-size: 20px;
   font-weight: 500;
   text-align: center;
-  padding: 38px 80px;
+  padding: 38px 96px;
   border-radius: 60px;
   letter-spacing: 5px;
 }
@@ -116,4 +121,217 @@ body {
   justify-content: space-between;
   width: 1000px;
   margin: 60px auto 0;
+}
+
+.myPage-contentsItem {
+  width: 30%;
+}
+
+.myPage-leadPicture img {
+  max-width: 100%;
+}
+
+.myPage-contentsItemHeading {
+  font-size: 22px;
+  color: #6fcc25;
+  text-align: center;
+  margin: 20px auto 0;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.myPage-contentsMarkerWrapper {
+  text-align: center;
+  margin: 8px auto 0;
+}
+
+.myPage-contentsMarker {
+  color: #727171;
+  background: linear-gradient(transparent 60%, #fff600 60%);
+  letter-spacing: 1px;
+}
+
+.myPage-faq {
+  margin: 0 auto 110px;
+}
+
+.myPage-faqList {
+  width: 1000px;
+  margin: 60px auto 0;
+}
+
+.myPage-faqItem {
+  border: 2px solid #6fcc25;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(118, 117, 118, 0.3);
+  position: relative;
+}
+
+.myPage-faqQuestionWrapper {
+  padding: 24px 30px;
+}
+
+.myPage-faqQuestionWrapper:hover {
+  cursor: pointer;
+}
+
+.myPage-faqItem:not(:first-child) {
+  margin: 30px auto 0;
+}
+
+.myPage-faqItem::before {
+  content: "";
+  background-color: #6fcc25;
+}
+
+.myPage-faqQuestion,
+.myPage-faqAnswer {
+  display: block;
+}
+
+.myPage-faqQuestion {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #6fcc25;
+  font-weight: 500;
+  min-height: 55px;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.myPage-faqQuestion::before {
+  display: inline-flex;
+  align-items: center;
+  min-height: 55px;
+  font-size: 55px;
+  margin-right: 24px;
+  text-shadow: 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25,
+    0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25,
+    0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25;
+  color: #ffffff;
+  content: "Q";
+  font-family: "Quicksand", sans-serif;
+  min-width: 48px;
+}
+
+.myPage-faqAnswerWrapper {
+  display: none;
+  padding: 0 0 32px 30px;
+}
+
+.myPage-faqAnswer {
+  margin: 10px 0 0;
+  color: #727171;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  min-width: 48px;
+  letter-spacing: 1px;
+}
+
+.myPage-faqAnswer::before {
+  display: inline-flex;
+  justify-content: center;
+  margin-right: 24px;
+  font-size: 55px;
+  color: #6fcc25;
+  content: "A";
+  font-family: "Quicksand", sans-serif;
+  min-width: 48px;
+}
+
+.myPage-faqIconVertical {
+  position: absolute;
+  top: 44px;
+  right: 48px;
+  width: 2px;
+  height: 16px;
+  background-color: #6fcc25;
+}
+
+.myPage-faqIconHorizontal {
+  position: absolute;
+  top: 51px;
+  right: 41px;
+  width: 15px;
+  height: 2px;
+  background-color: #6fcc25;
+}
+
+
+
+.myPage-overview .sectionHeading {
+  margin-top: 0;
+}
+
+.myPage-overview {
+  padding: 120px 0 100px;
+  background-color: #f0fae9;
+}
+
+.myPage-overviewGraph {
+  width: 1000px;
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.myPage-overviewGraph dt {
+  background-color: #ffffff;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6fcc25;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.myPage-overviewGraph dd {
+  background-color: #ffffff;
+  padding: 30px 0 30px 30px;
+  border-radius: 0px 10px 10px 0px;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.myPage-overviewContentsItem::before {
+  content: "●";
+}
+
+.myPage-terms {
+  padding: 30px 64px;
+  margin: 48px auto 0;
+  width: 1000px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 250px;
+  overflow-y: auto;
+}
+
+.myPage-termsHeading {
+  color: #6fcc25;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 16px;
+}
+
+.myPage-termsParagpraph {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.myPage-termsButton {
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.myPage-termsButton .btn {
+  display: inline-block;
+}
 }
