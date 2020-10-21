@@ -7,10 +7,10 @@
  * @package The7\Templates
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-get_template_part( 'header-single' );
-get_template_part( 'header-main' );
+get_template_part('header-single');
+get_template_part('header-main');
 
 ?>
 

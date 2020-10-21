@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
 
 	<div class="main-gradient"></div>
 	<div class="wf-wrap">
-<div class="<?php if (!is_front_page()) { ?> wf-container-main <?php } ?>">
+<div class="<?php if (!is_front_page() && !is_page('my-page')) { ?>wf-container-main<?php } ?>">
 
 	<?php do_action('presscore_before_content'); ?>
 

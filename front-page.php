@@ -37,6 +37,7 @@ get_header();
                                 <?php
                                     $args = array(
                                         'post_type' => 'post',
+                                        'posts_per_page' => 3,
                                         'tax_query' => array(
                                             array(
                                                 'taxonomy' => 'category',
@@ -107,8 +108,8 @@ get_header();
                         </li>
                     </ul>
                     <div class="home-aboutButtons">
-                        <a class="btn primary">会員登録はこちら</a>
-                        <a class="btn secondary">ログインはこちら</a>
+                        <a href="<?php echo home_url('/my-page/'); ?>" class="btn primary">会員登録はこちら</a>
+                        <a href="<?php echo home_url('/login/'); ?>" class="btn secondary">ログインはこちら</a>
                     </div>
                 </section>
                 <section class="home-category">
@@ -247,7 +248,7 @@ get_header();
                                     <div class="home-eventMeta">
                                         <?php
                                             $tags = get_tags();
-                                            foreach( $tags as $tag) {
+                                            foreach ($tags as $tag) {
                                                 echo '<span class="home-eventTag">'.$tag->name.'</span>';
                                             }
                                         ?>
@@ -263,7 +264,7 @@ get_header();
                         <p>準備中です</p>
                     <?php endif; ?>
                     <div class="home-categoryBtnWrapper">
-                        <a href="<?php echo home_url('/event/'); ?>" class="btn secondary custom-font home-categoryBtn">SEE MORE</a>
+                        <a href="<?php echo home_url('/category/event/'); ?>" class="btn secondary custom-font home-categoryBtn">SEE MORE</a>
                     </div>
                 </section>
                 <section class="home-worry">
@@ -302,7 +303,7 @@ get_header();
                         </picture>
                     </div>
                     <div class="home-worryMessageBtn">
-                        <a href="" class="btn fill">Grow会員登録はこちら</a>
+                        <a href="<?php echo home_url('/my-page/'); ?>" class="btn fill">Grow会員登録はこちら</a>
                     </div>
                 </section>
             </div>

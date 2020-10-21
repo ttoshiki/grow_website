@@ -1,0 +1,700 @@
+.myPage-wrapper * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, Verdana, Meiryo, sans-serif;
+  color: #727171;
+}
+
+.text-font {
+  font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, Verdana, Meiryo, sans-serif;
+}
+
+.custom-font {
+  font-family: "Quicksand", sans-serif;
+}
+
+.fixedMenuLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: #58b530;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.fixedMenuLink.-primary {
+  background-color: #fff600;
+}
+
+.fixedMenuLink.-secondary {
+  border: 2px solid rgb(88, 181, 48);
+  background-color: #ffffff;
+}
+
+.sectionHeading {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 13px;
+  text-align: center;
+  font-size: 55px;
+  color: #6fcc25;
+  margin: 110px 0 0;
+}
+
+.sectionHeadingSub {
+  display: block;
+  text-align: center;
+  margin: 26px 0 0;
+}
+
+.btn {
+  box-shadow: 0px 0px 12.22px 0.78px rgba(54, 54, 54, 0.21);
+  min-width: 320px;
+  height: 80px;
+  border-radius: 40px;
+  text-decoration: none;
+  padding: 32px 80px;
+  letter-spacing: 4px;
+  line-height: 1;
+  font-weight: 600;
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  background-image: url(../images/icons/arrow.png);
+  background-size: cover;
+  width: 31px;
+  height: 15px;
+  right: 30px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* フッターボタン */
+.myPage-wrapper a.button.product_type_subscription.add_to_cart_button.ajax_add_to_cart {
+  background-image: -webkit-linear-gradient(
+    110deg,
+    rgb(64, 177, 52) 33%,
+    rgb(119, 206, 47) 54%,
+    rgb(174, 234, 42) 100%
+  );
+  color: #ffffff;
+
+  box-shadow: 0px 0px 12.22px 0.78px rgba(54, 54, 54, 0.21);
+  min-width: 320px;
+  height: 80px;
+  border-radius: 40px;
+  text-decoration: none;
+  padding: 32px 20px 32px 0px;
+  letter-spacing: 4px;
+  line-height: 1;
+  font-weight: 600;
+  position: relative;
+}
+
+.btn.fill {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #6fcc25;
+}
+
+/* フッターボタン */
+.myPage-wrapper a.button.product_type_subscription.add_to_cart_button.ajax_add_to_cart::after {
+  filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(240%) contrast(101%);
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  background-image: url(../images/icons/arrow.png);
+  background-size: cover;
+  width: 31px;
+  height: 15px;
+  right: 30px;
+  left: auto;
+}
+
+.myPage-wrapper a.button.product_type_subscription.add_to_cart_button.ajax_add_to_cart:hover {
+  opacity: 0.6;
+}
+
+.btn.secondary {
+  color: #6fcc25;
+  border: 2px solid #6fcc25;
+}
+
+#main {
+  padding: 0;
+}
+
+a {
+  transition: all 0.2s;
+}
+
+.scroll-top.on {
+  display: none;
+}
+
+.page-title > .wf-wrap,
+#fancy-header > .wf-wrap {
+  display: none;
+}
+
+.myPage-header {
+  background-image: -webkit-linear-gradient(110deg, rgb(64, 177, 52) 10%, rgb(219, 251, 108) 100%);
+  padding: 112px 0;
+}
+
+.myPage-heading {
+  color: #ffffff;
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+
+.myPage-subHeading {
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 12px 0 0;
+}
+
+.myPage-lead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin: 120px auto 0;
+}
+
+.myPage-leadPicture img {
+  max-width: 100%;
+}
+
+.myPage-leadText {
+  margin-left: 110px;
+}
+
+.myPage-leadHeading {
+  font-size: 23px;
+  color: #6fcc25;
+  font-feature-settings: "palt";
+  letter-spacing: 3px;
+}
+
+.myPage-leadParagraph {
+  color: #727171;
+  font-size: 17px;
+  line-height: 2.35;
+  margin: 40px 0 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.myPage-conversionArea {
+  width: 1120px;
+  margin: 128px auto 0;
+  background-image: -webkit-linear-gradient(110deg, rgb(64, 177, 52) 10%, rgb(219, 251, 108) 100%);
+  border-radius: 10px;
+  padding: 64px 72px;
+}
+
+.myPage-conversionAreaHeading {
+  font-size: 26px;
+  color: #ffffff;
+  line-height: 1.92;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.myPage-conversionArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myPage-conversionAreaParagraph {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 2.3;
+}
+
+.myPage-conversionArea .btn {
+  height: auto;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 38px 96px;
+  border-radius: 60px;
+  letter-spacing: 5px;
+}
+
+.myPage-contentsList {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 60px auto 0;
+}
+
+.myPage-contentsItem {
+  width: 30%;
+}
+
+.myPage-contentsPicture img {
+  max-width: 100%;
+}
+
+.myPage-contentsItemHeading {
+  font-size: 22px;
+  color: #6fcc25;
+  text-align: center;
+  margin: 20px auto 0;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.myPage-contentsMarkerWrapper {
+  text-align: center;
+  margin: 8px auto 0;
+}
+
+.myPage-contentsMarker {
+  color: #727171;
+  background: linear-gradient(transparent 60%, #fff600 60%);
+  letter-spacing: 1px;
+}
+
+.myPage-faq {
+  margin: 0 auto 110px;
+}
+
+.myPage-faqList {
+  width: 1000px;
+  margin: 60px auto 0;
+}
+
+.myPage-faqItem {
+  border: 2px solid #6fcc25;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(118, 117, 118, 0.3);
+  position: relative;
+}
+
+.myPage-faqQuestionWrapper {
+  padding: 24px 30px;
+  position: relative;
+}
+
+.myPage-faqQuestionWrapper:hover {
+  cursor: pointer;
+}
+
+.myPage-faqItem:not(:first-child) {
+  margin: 30px auto 0;
+}
+
+.myPage-faqQuestion,
+.myPage-faqAnswer {
+  display: block;
+}
+
+.myPage-faqQuestion {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #6fcc25;
+  font-weight: 500;
+  min-height: 55px;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.myPage-faqQuestion::before {
+  display: inline-flex;
+  align-items: center;
+  min-height: 55px;
+  font-size: 55px;
+  margin-right: 24px;
+  text-shadow: 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25,
+    0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25,
+    0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25, 0 0 2px #6fcc25;
+  color: #ffffff;
+  content: "Q";
+  font-family: "Quicksand", sans-serif;
+  min-width: 48px;
+}
+
+.myPage-faqAnswerWrapper {
+  display: none;
+  padding: 0 0 32px 30px;
+}
+
+.myPage-faqAnswer {
+  margin: 10px 0 0;
+  color: #727171;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  min-width: 48px;
+  letter-spacing: 1px;
+}
+
+.myPage-faqAnswer::before {
+  display: inline-flex;
+  justify-content: center;
+  margin-right: 24px;
+  font-size: 55px;
+  color: #6fcc25;
+  content: "A";
+  font-family: "Quicksand", sans-serif;
+  min-width: 48px;
+}
+
+.myPage-faqIconVertical {
+  position: absolute;
+  top: 44px;
+  right: 48px;
+  width: 2px;
+  height: 16px;
+  background-color: #6fcc25;
+}
+
+.myPage-faqIconHorizontal {
+  position: absolute;
+  top: 51px;
+  right: 41px;
+  width: 15px;
+  height: 2px;
+  background-color: #6fcc25;
+}
+
+.myPage-overview .sectionHeading {
+  margin-top: 0;
+}
+
+.myPage-overview {
+  padding: 120px 0 100px;
+  background-color: #f0fae9;
+}
+
+.myPage-overviewGraph {
+  width: 1000px;
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.myPage-overviewGraph dt {
+  background-color: #ffffff;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6fcc25;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.myPage-overviewGraph dd {
+  background-color: #ffffff;
+  padding: 30px 0 30px 30px;
+  border-radius: 0px 10px 10px 0px;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.myPage-overviewContentsItem::before {
+  content: "●";
+}
+
+.myPage-terms {
+  padding: 30px 64px;
+  margin: 48px auto 0;
+  width: 1000px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 250px;
+  overflow-y: auto;
+}
+
+.myPage-termsHeading {
+  color: #6fcc25;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 16px;
+}
+
+.myPage-termsParagpraph {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.myPage-termsButton {
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.myPage-termsButton .btn {
+  display: inline-block;
+}
+
+@media all and (max-width: 480px) {
+  .-pc {
+    display: none;
+  }
+
+  .-sp {
+    display: block;
+  }
+
+  .fixedMenu.-sp {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+  }
+
+  .btn {
+    height: 64px;
+    padding: 24px 0;
+    width: 100%;
+    min-width: auto;
+    text-align: center;
+  }
+
+  .btn.fill {
+    width: 100%;
+    height: auto;
+    font-size: 4.1vw;
+    text-align: left;
+    letter-spacing: 1vw;
+    padding: 6.3vw 0 6.3vw 6.3vw;
+  }
+
+  .btn.fill::after {
+    right: 5vw;
+    width: 7vw;
+    height: 3.3vw;
+  }
+
+  .sectionHeading {
+    margin: 56px 0 0;
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+
+  .sectionHeadingSub {
+    margin: 8px 0 0;
+    font-size: 14px;
+  }
+
+  .myPage-header {
+    padding: 80px 0;
+  }
+
+  .myPage-heading {
+    font-size: 32px;
+  }
+
+  .myPage-subHeading {
+    font-size: 16px;
+  }
+
+  .myPage-lead {
+    flex-direction: column;
+    margin: 64px auto 0;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .myPage-leadPicture img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .myPage-leadHeading {
+    text-align: center;
+  }
+
+  .myPage-leadText {
+    margin: 40px auto 0;
+  }
+
+  .myPage-leadParagraph {
+    font-size: 16px;
+    line-height: 2;
+    margin: 24px 0 0;
+  }
+
+  .myPage-conversionArea {
+    padding: 48px 20px;
+    margin: 80px auto 0;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .myPage-conversionAreaHeading {
+    font-size: 24px;
+  }
+
+  .myPage-conversionAreaParagraph {
+    font-size: 16px;
+  }
+
+  .myPage-conversionArea .btn {
+    padding: 26px 0 26px 8vw;
+    margin: 16px 0 0;
+    text-align: left;
+    font-size: 4.4vw;
+    letter-spacing: 1vw;
+  }
+
+  .myPage-contents {
+    margin-bottom: 80px;
+  }
+
+  .myPage-contentsList {
+    padding: 0 20px;
+    margin: 32px auto 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .myPage-contentsItem {
+    width: 100%;
+  }
+
+  .myPage-contentsPicture img {
+    width: 48%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .myPage-contentsItem:not(:first-child) {
+    margin: 48px auto 0;
+  }
+
+  .myPage-contentsItemHeading {
+    font-size: 20px;
+    margin: 16px auto 0;
+  }
+
+  .myPage-contentsMarker {
+    font-size: 15px;
+  }
+
+  .myPage-faq {
+    margin: 0 auto 64px;
+  }
+
+  .myPage-faqList {
+    width: 100%;
+    padding: 0 20px;
+    margin: 48px auto 0;
+  }
+
+  .myPage-faqQuestionWrapper {
+    padding: 24px 44px 24px 20px;
+  }
+
+  .myPage-faqQuestion {
+    font-size: 16px;
+    text-align: justify;
+    letter-spacing: 1px;
+  }
+
+  .myPage-faqQuestion::before,
+  .myPage-faqAnswer::before {
+    font-size: 40px;
+    min-height: 40px;
+    margin-right: 8px;
+  }
+
+  .myPage-faqIconVertical {
+    right: 24px;
+    top: 44%;
+  }
+
+  .myPage-faqIconHorizontal {
+    top: 50%;
+    right: 17px;
+  }
+
+  .myPage-faqAnswerWrapper {
+    padding: 0 44px 24px 24px;
+  }
+
+  .myPage-faqAnswer {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .myPage-faqAnswer::before {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .myPage-overview {
+    padding: 64px 20px 80px;
+    width: 100%;
+  }
+
+  .myPage-overviewGraph {
+    margin: 48px auto 0;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .myPage-overviewGraph dt {
+    padding: 16px 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .myPage-overviewGraph dd {
+    padding: 32px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .myPage-overviewContentsItem {
+    padding-left: 10px;
+    text-indent: -10px;
+  }
+
+  .myPage-overviewContentsItem:not(:first-child) {
+    margin-top: 6px;
+  }
+
+  .myPage-terms {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .myPage-termsButton {
+    margin: 40px auto 0;
+  }
+}
