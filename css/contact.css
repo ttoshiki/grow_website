@@ -139,6 +139,11 @@ a {
   font-weight: 500;
 }
 
+.contact-mailLink {
+  color: #6fcc25;
+  text-decoration: none;
+}
+
 .form-item {
   display: flex;
   align-items: flex-start;

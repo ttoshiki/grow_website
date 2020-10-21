@@ -33,7 +33,7 @@ get_header();
               </div>
               <section class="contact-form">
                 <p class="contact-form__paragraph">
-                  お問い合わせフォームからご連絡ください。ご記入されましたら【送信】ボタンをクリックしてください。送信後に確認メールをお送りしています。届かない場合は、お手数ですがinfo@grow-online.jpまでお問い合わせ内容をお送りください。
+                  お問い合わせフォームからご連絡ください。ご記入されましたら【送信】ボタンをクリックしてください。送信後に確認メールをお送りしています。届かない場合は、お手数ですが<a href="mailto:info@grow-online.jp" class="contact-mailLink">info@grow-online.jp</a>までお問い合わせ内容をお送りください。
                 </p>
                 <div class="contact-form-wrapper">
                   <?php while (have_posts()) : ?>
