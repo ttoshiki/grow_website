@@ -15,8 +15,8 @@ get_template_part('header-main');
 ?>
 
 <aside class="fixedMenu -sp">
-  <a href="<?php echo home_url(); ?>" class="fixedMenuLink -primary">会員登録</a>
-  <a href="<?php echo home_url(); ?>" class="fixedMenuLink -secondary">ログイン</a>
+  <a href="<?php echo home_url('/my-page/'); ?>" class="fixedMenuLink -primary">会員登録</a>
+  <a href="<?php echo home_url('/login/'); ?>" class="fixedMenuLink -secondary">ログイン</a>
 </aside>
 
 <?php
