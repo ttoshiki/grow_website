@@ -1,0 +1,444 @@
+.contact-wrapper * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, Verdana, Meiryo, sans-serif;
+  color: #727171;
+}
+
+.text-font {
+  font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, Verdana, Meiryo, sans-serif;
+}
+
+.custom-font {
+  font-family: "Quicksand", sans-serif;
+}
+
+.fixedMenu {
+  display: none;
+}
+
+.fixedMenuLink.-primary {
+  background-color: #fff600;
+}
+
+.fixedMenuLink.-secondary {
+  border: 2px solid rgb(88, 181, 48);
+  background-color: #ffffff;
+}
+
+.sectionHeading {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 13px;
+  text-align: center;
+  font-size: 55px;
+  color: #6fcc25;
+  margin: 110px 0 0;
+}
+
+.sectionHeadingSub {
+  display: block;
+  text-align: center;
+  margin: 26px 0 0;
+}
+
+.btn {
+  box-shadow: 0px 0px 12.22px 0.78px rgba(54, 54, 54, 0.21);
+  min-width: 320px;
+  height: 80px;
+  border-radius: 40px;
+  text-decoration: none;
+  padding: 32px 80px;
+  letter-spacing: 4px;
+  line-height: 1;
+  font-weight: 600;
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  background-image: url(../images/icons/arrow.png);
+  background-size: cover;
+  width: 31px;
+  height: 15px;
+  right: 30px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn.secondary {
+  color: #6fcc25;
+  border: 2px solid #6fcc25;
+}
+
+#main {
+  padding: 0;
+}
+
+#main > .wf-wrap {
+  padding: 0;
+  width: 100%;
+}
+
+#main:not(.sidebar-none) .wf-container-main {
+  display: block;
+}
+
+a {
+  transition: all 0.2s;
+}
+
+.scroll-top.on {
+  display: none;
+}
+
+.page-title > .wf-wrap,
+#fancy-header > .wf-wrap {
+  display: none;
+}
+
+.contact-header {
+  background-image: -webkit-linear-gradient(110deg, rgb(64, 177, 52) 10%, rgb(219, 251, 108) 100%);
+  padding: 112px 0;
+}
+
+.contact-heading {
+  color: #ffffff;
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+
+.contact-subHeading {
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 12px 0 0;
+}
+
+.contact-form {
+  width: 780px;
+  margin: 148px auto 0;
+}
+
+.contact-form__paragraph {
+  color: #727171;
+  line-height: 2.35;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.form-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 24px 0 0;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  min-width: 216px;
+}
+
+.contact-form-wrapper {
+  margin: 64px auto 0;
+}
+
+.form-required {
+  background-color: #fff600;
+  color: #727171;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-indent: 4px;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.form-labelName {
+  margin: 0 16px 0 8px;
+  font-weight: 600;
+}
+
+span.wpcf7-list-item {
+  margin: 0 20px 12px 0;
+}
+
+.form-name,
+.form-furigana {
+  display: flex;
+}
+
+.your-name,
+.your-name-furigana {
+  margin-left: 12px;
+}
+
+.your-sex,
+.your-name,
+.your-sex-furigana,
+.your-name-furigana {
+  width: 40%;
+}
+
+.form-fullWidth {
+  width: 100%;
+}
+
+.contact-wrapper .wpcf7-form input[type="submit"] {
+  box-shadow: 0px 0px 12.22px 0.78px rgba(54, 54, 54, 0.21);
+  min-width: 320px;
+  height: 72px;
+  border-radius: 40px;
+  text-decoration: none;
+  padding: 26px 80px;
+  letter-spacing: 4px;
+  line-height: 1;
+  font-weight: 600;
+  position: relative;
+  background-image: -webkit-linear-gradient(
+      110deg,
+      rgb(64, 177, 52) 33%,
+      rgb(119, 206, 47) 54%,
+      rgb(174, 234, 42) 100%
+  );
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.contact-wrapper .contact-form .wpcf7-form .form-submitBtn > input[type="submit"]:hover {
+  background-image: -webkit-linear-gradient(
+      110deg,
+      rgb(64, 177, 52) 33%,
+      rgb(119, 206, 47) 54%,
+      rgb(174, 234, 42) 100%
+  )!important;
+  opacity: 0.6;
+}
+
+.your-sex .wpcf7-form-control,
+.your-name .wpcf7-form-control,
+.your-sex-furigana .wpcf7-form-control,
+.your-name-furigana .wpcf7-form-control,
+.your-email .wpcf7-form-control,
+.your-message .wpcf7-textarea {
+  box-shadow: inset -2px 2px 2px 0px rgba(10, 3, 6, 0.12);
+}
+
+.your-sex .wpcf7-form-control::placeholder,
+.your-name .wpcf7-form-control::placeholder,
+.your-sex-furigana .wpcf7-form-control::placeholder,
+.your-name-furigana .wpcf7-form-control::placeholder,
+.your-email .wpcf7-form-control::placeholder,
+.your-message .wpcf7-textarea::placeholder {
+  font-weight: 500;
+}
+
+.your-message .wpcf7-textarea {
+  resize: none;
+}
+
+.form-submitBtn {
+  display: flex;
+  align-items: center;
+  width: 41%;
+  margin: 48px auto 80px;
+  position: relative;
+}
+
+.form-submitBtn::after {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  background-image: url(../images/icons/arrow.png);
+  background-size: cover;
+  width: 31px;
+  height: 15px;
+  right: 30px;
+  filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(240%) contrast(101%);
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+}
+
+.wpcf7-list-item-label {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+.wpcf7-list-item-label::before {
+  content: "";
+  background: #fff;
+  border-radius: 100%;
+  border: 1px solid #e4e4e4;
+  display: inline-block;
+  box-shadow: inset -2px 2px 1px 0px rgba(10, 3, 6, 0.12);
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: -0.1em;
+  margin-right: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type=radio]:checked + .wpcf7-list-item-label:before {
+  background-color: #6fcc25;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+@media all and (max-width: 480px) {
+  .-pc {
+    display: none;
+  }
+
+  .-sp {
+    display: block;
+  }
+
+  .fixedMenuLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: #58b530;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  .fixedMenu.-sp {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+  }
+
+  .btn {
+    height: 64px;
+    padding: 24px 0;
+    width: 100%;
+    min-width: auto;
+    text-align: center;
+  }
+
+  .btn.fill {
+    width: 100%;
+    height: auto;
+    font-size: 4.1vw;
+    text-align: left;
+    letter-spacing: 1vw;
+    padding: 6.3vw 0 6.3vw 6.3vw;
+  }
+
+  .btn.fill::after {
+    right: 5vw;
+    width: 7vw;
+    height: 3.3vw;
+  }
+
+  .sectionHeading {
+    margin: 56px 0 0;
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+
+  .sectionHeadingSub {
+    margin: 8px 0 0;
+    font-size: 14px;
+  }
+
+  .contact-header {
+    padding: 80px 0;
+  }
+
+  .contact-heading {
+    font-size: 32px;
+  }
+
+  .contact-subHeading {
+    font-size: 16px;
+  }
+
+  .contact-form-wrapper {
+    margin: 48px auto 0;
+  }
+
+  .contact-form {
+    padding: 0 20px;
+    margin: 80px auto 0;
+    width: 100%;
+  }
+
+  .form-item {
+    flex-direction: column;
+  }
+
+  .form-label {
+    margin: 0 0 16px;
+  }
+
+  .form-required {
+    padding: 2px 6px;
+    font-size: 14px;
+  }
+
+  span.wpcf7-list-item {
+    display: block;
+    margin: 0;
+  }
+
+  span.wpcf7-list-item:not(:first-child) {
+    margin: 12px 0 0;
+  }
+
+  .your-sex, .your-name, .your-sex-furigana, .your-name-furigana {
+    width: 48%;
+  }
+
+  .your-message .wpcf7-textarea {
+    height: 200px;
+  }
+
+  .contact-wrapper .wpcf7-form input[type="submit"] {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .form-submitBtn {
+    width: 100%;
+    margin: 40px auto 64px;
+  }
+
+  div.wpcf7 .ajax-loader {
+    position: absolute;
+    top: 80px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}

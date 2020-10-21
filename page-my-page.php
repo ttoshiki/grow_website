@@ -57,11 +57,11 @@ get_header();
                     いつでもどこでも<br class="-sp">誰にでも。
                   </h2>
                   <p class="myPage-conversionAreaParagraph">
-                    正しい考え方と手法を身につけることで、<br>
+                    正しい考え方と手法を身につけることで、<br class="-pc">
                     誰でも投資で資産形成ができるようになります。
                   </p>
                 </div>
-                <a href="<?php echo home_url('/my-page/'); ?>" class="btn fill">Grow会員登録はこちら</a>
+                <a href="#overview" class="btn fill">Grow会員登録はこちら</a>
               </section>
               <section class="myPage-contents">
                 <h2 class="sectionHeading">Contents</h2>
@@ -145,7 +145,7 @@ get_header();
                   </li>
                 </ul>
               </section>
-              <section class="myPage-overview">
+              <section class="myPage-overview" id="overview">
                 <h2 class="sectionHeading">Over view</h2>
                 <span class="sectionHeadingSub">Growについて</span>
                 <dl class="myPage-overviewGraph">
@@ -183,7 +183,8 @@ get_header();
                   </p>
                 </div>
                 <div class="myPage-termsButton">
-                  <a href="<?php echo home_url('/my-page/') ?>" class="btn primary">会員登録はこちら</a>
+                  <?php echo do_shortcode('[add_to_cart id="8179"]'); ?>
+                  <!-- <a href="<?php echo home_url('/my-page/') ?>" class="btn primary">会員登録はこちら</a> -->
                 </div>
               </section>
             </div>
