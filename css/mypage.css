@@ -210,7 +210,7 @@ a {
 .myPage-conversionArea {
   width: 1120px;
   margin: 128px auto 0;
-  background-image: -webkit-linear-gradient(110deg, rgb(64, 177, 52) 10%, rgb(219, 251, 108) 100%);
+  background-image: -webkit-linear-gradient(290deg, rgb(64, 177, 52) 10%, rgb(219, 251, 108) 100%);
   border-radius: 10px;
   padding: 64px 72px;
 }

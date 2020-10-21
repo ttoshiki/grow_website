@@ -234,6 +234,7 @@ span.wpcf7-list-item {
 .your-email .wpcf7-form-control,
 .your-message .wpcf7-textarea {
   box-shadow: inset -2px 2px 2px 0px rgba(10, 3, 6, 0.12);
+  color: #727171;
 }
 
 .your-sex .wpcf7-form-control::placeholder,
@@ -314,6 +315,10 @@ input[type=radio]:checked + .wpcf7-list-item-label:before {
 
   .-sp {
     display: block;
+  }
+
+  #page #main {
+    padding: 0;
   }
 
   .fixedMenuLink {
